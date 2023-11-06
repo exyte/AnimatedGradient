@@ -11,9 +11,10 @@ import AnimatedGradient
 struct ContentView: View {
     @State var colors: [Color] = Gradients.debug.colors
     @State var colorsCount: Int = 2
+    @State var duration: TimeInterval = 3
     @State var animation: Animation = .linear(duration: 3)
 
-    @State private var showSettings = !false
+    @State private var showSettings = false
 
     var body: some View {
         ZStack {
@@ -31,6 +32,9 @@ struct ContentView: View {
             }
         }
         .overlay(settingsButton, alignment: .bottomTrailing)
+        .onChange(of: duration) { value in
+            animation = .linear(duration: value)
+        }
     }
 
     private var settingsButton: some View {
@@ -63,12 +67,13 @@ struct ContentView: View {
                 .font(.title2)
                 .padding(.top, 8)
             Stepper("Current: \(colorsCount)", value: $colorsCount, in: 2...10)
+
+            Text("Animation duration: " + String(format: "%.1f", duration))
+                .font(.title2)
+                .padding(.top, 8)
+            Slider(value: $duration, in: 0.3...10)
         }
         .padding()
         .background(Rectangle().fill(.white).shadow(radius: 8).padding(8))
     }
 }
-
-//#Preview {
-//    ContentView()
-//}

@@ -66,9 +66,3 @@ struct ColorPicker: View {
         }
     }
 }
-
-//#Preview {
-//    @State var colors: [Color] = [.red, .green, .blue]
-//
-//    return ColorPicker(colors: $colors)
-//}

@@ -18,22 +18,25 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            AnimatedLinearGradient(
-                colors: $colors,
-                colorsCount: colorsCount,
-                animation: animation,
-                startPoint: .bottomLeading,
-                endPoint: .topTrailing
-            )
-            .ignoresSafeArea()
-
-            if showSettings {
-                settingsView
-            }
+            AnimatedLinearGradient(colors: colors)
+                .numberOfColors(colorsCount)
+                .setAnimation(animation)
+                .gradientPoints(start: .bottomLeading, end: .topTrailing)
+                .ignoresSafeArea()
         }
         .overlay(settingsButton, alignment: .bottomTrailing)
         .onChange(of: duration) { value in
             animation = .linear(duration: value)
+        }
+        .sheet(isPresented: $showSettings) {
+            NavigationView {
+                ScrollView {
+                    settingsView
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Settings")
+            }
+            .navigationViewStyle(.stack)
         }
     }
 
@@ -41,19 +44,11 @@ struct ContentView: View {
         Button {
             showSettings.toggle()
         } label: {
-            if showSettings {
-                Image(systemName: "xmark")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(13)
-                    .background(Circle().fill(.white))
-            } else {
-                Image(systemName: "gear")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(6)
-                    .background(Circle().fill(.white))
-            }
+            Image(systemName: "gear")
+                .resizable()
+                .scaledToFit()
+                .padding(6)
+                .background(Circle().fill(.white))
         }
         .frame(width: 44, height: 44)
         .foregroundColor(.black)
@@ -74,6 +69,5 @@ struct ContentView: View {
             Slider(value: $duration, in: 0.3...10)
         }
         .padding()
-        .background(Rectangle().fill(.white).shadow(radius: 8).padding(8))
     }
 }

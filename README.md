@@ -11,12 +11,6 @@
 ![](https://img.shields.io/github/v/tag/exyte/AnimatedGradient?label=Version)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
-# TODO
-- [ ] Make configuration with modifiers (remove parameters from init)
-- [ ] Add radial gradient
-- [ ] Add more examples (incuding change animation type)
-- [ ] Add gradient presets
-
 # Usage
 
 ## Minimal example
@@ -30,6 +24,19 @@ struct ContentView: View {
     }
 }
 ```
+
+**or**
+
+```swift
+import AnimatedGradient
+
+struct ContentView: View {
+    var body: some View {
+        AnimatedLinearGradient(preset: Gradients.<present name>)
+    }
+}
+```
+
 ## With optional parameters
 
 ```swift
@@ -37,27 +44,25 @@ import AnimatedGradient
 
 struct ContentView: View {
     var body: some View {
-        AnimatedLinearGradient(
-            colors: [.red, .green, .blue],
-            colorsCount: 2,
-            animation: .linear(duration: 5),
-            startPoint: .bottomLeading,
-            endPoint: .topTrailing
-        )
+        AnimatedLinearGradient(colors: [.red, .green, .blue])
+            .numberOfColors(2)
+            .setAnimation(.linear(duration: 5))
+            .gradientPoints(start: .bottomLeading, end: .topTrailing)
     }
 }
 ```
 
 
-### Required parameters 
-- `colors` - **TBD**  
+### Required parameters - init 
+- `colors` - An array of colors between which the gradient will transition
+**or**
+- `preset` - Ready set of colors for gradient
 
-### Available customizations - optional parameters
+### Available customizations - modifiers
 
-- `colorsCount` - **TBD**
-- `animation` - **TBD**
-- `startPoint` - **TBD**
-- `endPoint` - **TBD**    
+- `numberOfColors(Int)` - Number of simultaneous gradient colors
+- `setAnimation(Animation)` - Animation of the transition of one color to another
+- `gradientPoints(start:end:)` - Linear gradient points  
 
 ## Examples
 
@@ -75,14 +80,6 @@ dependencies: [
     .package(url: "https://github.com/exyte/AnimatedGradient.git")
 ]
 ```
-
-### [CocoaPods](http://cocoapods.org)
-
-???
-
-### [Carthage](http://github.com/Carthage/Carthage)
-
-???
 
 ## Requirements
 

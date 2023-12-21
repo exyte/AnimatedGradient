@@ -10,17 +10,13 @@ public struct AnimatedLinearGradient: View {
     @State private var progress: Double = 0
 
     var colors: [Color] = []
-    var colorsCount: Int = 2
+    var simultaneousColorsCount: Int = 2
     var animation: Animation = .linear(duration: 3)
     var startPoint: UnitPoint = .topTrailing
     var endPoint: UnitPoint = .bottomLeading
 
     public init(colors: [Color]) {
         self.colors = colors
-    }
-
-    public init(preset: Gradients) {
-        self.colors = preset.colors
     }
 
     public var body: some View {
@@ -34,7 +30,7 @@ public struct AnimatedLinearGradient: View {
             )
             .onAppear {
                 viewModel.colors = colors
-                viewModel.nextGradients(colors: colorsCount)
+                viewModel.nextGradients(colors: simultaneousColorsCount)
 
                 withAnimation(animation) {
                     progress = 1
@@ -45,7 +41,7 @@ public struct AnimatedLinearGradient: View {
             }
             .onAnimationCompleted(for: progress) { value in
                 if value == 1 {
-                    viewModel.nextGradients(colors: colorsCount)
+                    viewModel.nextGradients(colors: simultaneousColorsCount)
                     progress = 0
                     withAnimation(animation) {
                         progress = 1
@@ -58,9 +54,9 @@ public struct AnimatedLinearGradient: View {
 // MARK: - Modifiers
 public extension AnimatedLinearGradient {
 
-    func numberOfColors(_ count: Int) -> AnimatedLinearGradient {
+    func numberOfSimultaneousColors(_ count: Int) -> AnimatedLinearGradient {
         var gradient = self
-        gradient.colorsCount = count
+        gradient.simultaneousColorsCount = count
         return gradient
     }
 

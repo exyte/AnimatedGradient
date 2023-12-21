@@ -25,18 +25,6 @@ struct ContentView: View {
 }
 ```
 
-**or**
-
-```swift
-import AnimatedGradient
-
-struct ContentView: View {
-    var body: some View {
-        AnimatedLinearGradient(preset: Gradients.<present name>)
-    }
-}
-```
-
 ## With optional parameters
 
 ```swift
@@ -45,24 +33,24 @@ import AnimatedGradient
 struct ContentView: View {
     var body: some View {
         AnimatedLinearGradient(colors: [.red, .green, .blue])
-            .numberOfColors(2)
+            .numberOfSimultaneousColors(2)
             .setAnimation(.linear(duration: 5))
             .gradientPoints(start: .bottomLeading, end: .topTrailing)
     }
 }
 ```
 
-
 ### Required parameters - init 
 - `colors` - An array of colors between which the gradient will transition
-**or**
-- `preset` - Ready set of colors for gradient
 
 ### Available customizations - modifiers
 
-- `numberOfColors(Int)` - Number of simultaneous gradient colors
-- `setAnimation(Animation)` - Animation of the transition of one color to another
-- `gradientPoints(start:end:)` - Linear gradient points  
+- `numberOfSimultaneousColors(Int)` - Number of colors on screen at any given time, can be more, equal or less than colors in the array  
+- `setAnimation(Animation)` - Animation of the transition of one color to another    
+- `gradientPoints(start:end:)` - Standard linear gradient control points  
+
+### Presets
+You can use preselected colors from GradientPreset for a quick start
 
 ## Examples
 

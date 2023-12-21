@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		139BF3D02AF8C6FD00859AE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139BF3CF2AF8C6FD00859AE6 /* Preview Assets.xcassets */; };
 		139BF3D92AF8CB1200859AE6 /* AnimatedGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 139BF3D82AF8CB1200859AE6 /* AnimatedGradient */; };
 		139BF3DC2AF8CEDD00859AE6 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139BF3DB2AF8CEDD00859AE6 /* ColorPicker.swift */; };
+		5B9CF88D2B341400008C76A0 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 5B9CF88C2B341400008C76A0 /* Flow */; };
+		5B9CF88F2B341400008C76A0 /* Renderer in Frameworks */ = {isa = PBXBuildFile; productRef = 5B9CF88E2B341400008C76A0 /* Renderer */; };
+		5B9CF8912B34163B008C76A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CF8902B34163B008C76A0 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,8 @@
 		139BF3CC2AF8C6FD00859AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		139BF3CF2AF8C6FD00859AE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		139BF3DB2AF8CEDD00859AE6 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		5B25F2F02B34228E00BADA96 /* AnimatedGradient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AnimatedGradient; path = ..; sourceTree = "<group>"; };
+		5B9CF8902B34163B008C76A0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9CF88F2B341400008C76A0 /* Renderer in Frameworks */,
+				5B9CF88D2B341400008C76A0 /* Flow in Frameworks */,
 				139BF3D92AF8CB1200859AE6 /* AnimatedGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +46,7 @@
 		139BF3BC2AF8C6FB00859AE6 = {
 			isa = PBXGroup;
 			children = (
+				5B25F2F02B34228E00BADA96 /* AnimatedGradient */,
 				139BF3C72AF8C6FB00859AE6 /* Example */,
 				139BF3C62AF8C6FB00859AE6 /* Products */,
 			);
@@ -55,9 +63,10 @@
 		139BF3C72AF8C6FB00859AE6 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				139BF3DA2AF8CED500859AE6 /* Views */,
 				139BF3C82AF8C6FB00859AE6 /* ExampleApp.swift */,
 				139BF3CA2AF8C6FB00859AE6 /* ContentView.swift */,
+				139BF3DB2AF8CEDD00859AE6 /* ColorPicker.swift */,
+				5B9CF8902B34163B008C76A0 /* Utils.swift */,
 				139BF3CC2AF8C6FD00859AE6 /* Assets.xcassets */,
 				139BF3CE2AF8C6FD00859AE6 /* Preview Content */,
 			);
@@ -70,14 +79,6 @@
 				139BF3CF2AF8C6FD00859AE6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		139BF3DA2AF8CED500859AE6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				139BF3DB2AF8CEDD00859AE6 /* ColorPicker.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +99,8 @@
 			name = Example;
 			packageProductDependencies = (
 				139BF3D82AF8CB1200859AE6 /* AnimatedGradient */,
+				5B9CF88C2B341400008C76A0 /* Flow */,
+				5B9CF88E2B341400008C76A0 /* Renderer */,
 			);
 			productName = Example;
 			productReference = 139BF3C52AF8C6FB00859AE6 /* Example.app */;
@@ -128,7 +131,7 @@
 			);
 			mainGroup = 139BF3BC2AF8C6FB00859AE6;
 			packageReferences = (
-				139BF3D72AF8CB1200859AE6 /* XCLocalSwiftPackageReference ".." */,
+				5B9CF88B2B341400008C76A0 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 			);
 			productRefGroup = 139BF3C62AF8C6FB00859AE6 /* Products */;
 			projectDirPath = "";
@@ -159,6 +162,7 @@
 				139BF3CB2AF8C6FB00859AE6 /* ContentView.swift in Sources */,
 				139BF3C92AF8C6FB00859AE6 /* ExampleApp.swift in Sources */,
 				139BF3DC2AF8CEDD00859AE6 /* ColorPicker.swift in Sources */,
+				5B9CF8912B34163B008C76A0 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -274,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -292,7 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = HGA6K9JZ6S;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -305,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pro.alex-m.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.exyte.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = HGA6K9JZ6S;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -334,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pro.alex-m.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.exyte.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -365,17 +369,31 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		139BF3D72AF8CB1200859AE6 /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ..;
+/* Begin XCRemoteSwiftPackageReference section */
+		5B9CF88B2B341400008C76A0 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		139BF3D82AF8CB1200859AE6 /* AnimatedGradient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AnimatedGradient;
+		};
+		5B9CF88C2B341400008C76A0 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B9CF88B2B341400008C76A0 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		5B9CF88E2B341400008C76A0 /* Renderer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B9CF88B2B341400008C76A0 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Renderer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

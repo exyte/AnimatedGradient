@@ -3,6 +3,19 @@
 <a href="https://exyte.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/our-site-dark.png" width="80" height="16"><img src="https://raw.githubusercontent.com/exyte/media/master/common/our-site-light.png" width="80" height="16"></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/exyteHQ"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/twitter-dark.png" width="74" height="16"><img src="https://raw.githubusercontent.com/exyte/media/master/common/twitter-light.png" width="74" height="16">
 </picture></a> <a href="https://exyte.com/contacts"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-dark.png" width="128" height="24" align="right"><img src="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-light.png" width="128" height="24" align="right"></picture></a>
 
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/161eee68-f8df-4066-ab45-8b6342d5c343" />
+            </td>
+            <td>
+                <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/345814e0-ea6a-4df0-982d-161dcc510df1" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 <p><h1 align="left">Animated Gradient</h1></p>
 
 <p><h4>Animated linear gradient library written with SwiftUI</h4></p>
@@ -25,7 +38,7 @@ struct ContentView: View {
 }
 ```
 
-## With optional parameters
+## With modifiers
 
 ```swift
 import AnimatedGradient

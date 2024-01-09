@@ -7,6 +7,9 @@
     <tbody>
         <tr>
             <td>
+                <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/26ed4ef5-db1a-44e4-a0ad-fdaf1771a9fc" />
+            </td>
+            <td>
                 <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/161eee68-f8df-4066-ab45-8b6342d5c343" />
             </td>
             <td>
@@ -38,7 +41,7 @@ struct ContentView: View {
 }
 ```
 
-## With modifiers
+### With modifiers
 
 ```swift
 import AnimatedGradient

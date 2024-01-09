@@ -7,7 +7,7 @@
     <tbody>
         <tr>
             <td>
-                <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/26ed4ef5-db1a-44e4-a0ad-fdaf1771a9fc" />
+                <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/b205fa00-b0a0-4b07-90b6-08b3776932c6" />
             </td>
             <td>
                 <img src="https://github.com/exyte/AnimatedGradient/assets/9447630/161eee68-f8df-4066-ab45-8b6342d5c343" />
@@ -29,7 +29,7 @@
 
 # Usage
 
-## Minimal example
+### Minimal example
 
 ```swift
 import AnimatedGradient

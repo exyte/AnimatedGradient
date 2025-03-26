@@ -11,7 +11,7 @@ public struct AnimatableLinearGradientModifier: AnimatableModifier {
     public let startPoint: UnitPoint
     public let endPoint: UnitPoint
 
-    public var animatableData: CGFloat {
+    public nonisolated var animatableData: CGFloat {
         get { progress }
         set { progress = newValue }
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class MockData {
-    static var colorNames = [
+    static let colorNames = [
         Color.hex("D2C7F6"): "Lavender",
         .hex("EFC6B7"): "Peach",
         .hex("F4F2C1"): "Cream",

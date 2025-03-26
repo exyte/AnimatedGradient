@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "139BF3C42AF8C6FB00859AE6"
-               BuildableName = "Example.app"
-               BlueprintName = "Example"
-               ReferencedContainer = "container:Example.xcodeproj">
+               BuildableName = "AnimatedGradientExample.app"
+               BlueprintName = "AnimatedGradientExample"
+               ReferencedContainer = "container:AnimatedGradientExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "139BF3C42AF8C6FB00859AE6"
-            BuildableName = "Example.app"
-            BlueprintName = "Example"
-            ReferencedContainer = "container:Example.xcodeproj">
+            BuildableName = "AnimatedGradientExample.app"
+            BlueprintName = "AnimatedGradientExample"
+            ReferencedContainer = "container:AnimatedGradientExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "139BF3C42AF8C6FB00859AE6"
-            BuildableName = "Example.app"
-            BlueprintName = "Example"
-            ReferencedContainer = "container:Example.xcodeproj">
+            BuildableName = "AnimatedGradientExample.app"
+            BlueprintName = "AnimatedGradientExample"
+            ReferencedContainer = "container:AnimatedGradientExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

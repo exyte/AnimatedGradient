@@ -23,8 +23,11 @@
 
 <p><h4>Animated linear gradient library written with SwiftUI</h4></p>
 
-
 ![](https://img.shields.io/github/v/tag/exyte/AnimatedGradient?label=Version)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fexyte%2FAnimatedGradient%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/exyte/AnimatedGradient)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fexyte%2FAnimatedGradient%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/exyte/AnimatedGradient)
+[![SPM](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swiftpackageindex.com/exyte/AnimatedGradient)
+[![Cocoapods](https://img.shields.io/badge/Cocoapods-Deprecated%20after%201.0.0-yellow.svg)](https://cocoapods.org/pods/AnimatedGradient)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
 # Usage
@@ -72,7 +75,7 @@ You can use preselected colors from GradientPreset for a quick start
 
 To try AnimatedGradient examples:
 - Clone the repo `https://github.com/exyte/AnimatedGradient.git`
-- Open `Example.xcodeproj`
+- Open `AnimatedGradientExample.xcodeproj`
 - Try it!
 
 ## Installation
@@ -97,7 +100,7 @@ dependencies: [
 [Chat](https://github.com/exyte/chat) - Chat UI framework with fully customizable message cells, input view, and a built-in media picker      
 [ConcentricOnboarding](https://github.com/exyte/ConcentricOnboarding) - Animated onboarding flow    
 [FloatingButton](https://github.com/exyte/FloatingButton) - Floating button menu    
-[ActivityIndicatorView](https://github.com/exyte/ActivityIndicatorView) - A number of animated loading indicators    
+[AnimatedGradient](https://github.com/exyte/AnimatedGradient) - A number of animated loading indicators    
 [ProgressIndicatorView](https://github.com/exyte/ProgressIndicatorView) - A number of animated progress indicators    
 [SVGView](https://github.com/exyte/SVGView) - SVG parser    
 [LiquidSwipe](https://github.com/exyte/LiquidSwipe) - Liquid navigation animation    

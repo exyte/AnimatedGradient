@@ -11,6 +11,11 @@ let package = Package(
         .library(name: "AnimatedGradient", targets: ["AnimatedGradient"]),
     ],
     targets: [
-        .target(name: "AnimatedGradient"),
+        .target(
+            name: "AnimatedGradient",
+            swiftSettings: [
+                .enableExperimentalFeature("StrictConcurrency")
+            ]
+        )
     ]
 )

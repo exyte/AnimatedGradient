@@ -5,7 +5,7 @@
 import SwiftUI
 
 /// An animatable modifier that is used for observing animations for a given animatable value.
-struct AnimationCompletionObserverModifier<Value>: AnimatableModifier where Value: VectorArithmetic {
+struct AnimationCompletionObserverModifier<Value>: AnimatableModifier where Value: VectorArithmetic & Sendable {
 
     /// While animating, SwiftUI changes the old input value to the new target value using this property. This value is set to the old value until the animation completes.
     var animatableData: Value {
@@ -21,9 +21,9 @@ struct AnimationCompletionObserverModifier<Value>: AnimatableModifier where Valu
     private var completion: (Value) -> Void
 
     init(observedValue: Value, completion: @escaping (Value) -> Void) {
-        self.completion = completion
         self.animatableData = observedValue
-        targetValue = observedValue
+        self.targetValue = observedValue
+        self.completion = completion
     }
 
     /// Verifies whether the current animation is finished and calls the completion callback if true.
@@ -39,7 +39,7 @@ struct AnimationCompletionObserverModifier<Value>: AnimatableModifier where Valu
 
     func body(content: Content) -> some View {
         /// We're not really modifying the view so we can directly return the original input value.
-        return content
+        content
     }
 }
 
@@ -50,7 +50,7 @@ extension View {
     ///   - value: The value to observe for animations.
     ///   - completion: The completion callback to call once the animation completes.
     /// - Returns: A modified `View` instance with the observer attached.
-    func onAnimationCompleted<Value: VectorArithmetic>(for value: Value, completion: @escaping (Value) -> Void) -> ModifiedContent<Self, AnimationCompletionObserverModifier<Value>> {
-        return modifier(AnimationCompletionObserverModifier(observedValue: value, completion: completion))
+    func onAnimationCompleted<Value: VectorArithmetic & Sendable>(for value: Value, completion: @escaping (Value) -> Void) -> ModifiedContent<Self, AnimationCompletionObserverModifier<Value>> {
+        modifier(AnimationCompletionObserverModifier(observedValue: value, completion: completion))
     }
 }
